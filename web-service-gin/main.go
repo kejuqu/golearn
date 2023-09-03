@@ -3,8 +3,10 @@ package main
 import (
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin" // 如果报错 需要使用 go get . (在当前 module 的终端运行
 )
+
+// learn link: https://go.dev/doc/tutorial/web-service-gin
 
 // album represents data about a record album.
 type album struct {

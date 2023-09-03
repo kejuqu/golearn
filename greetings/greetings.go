@@ -6,6 +6,8 @@ import (
 	"math/rand"
 )
 
+// learn link: https://go.dev/doc/tutorial/create-module
+
 // Hello returns a greeting for the named person.
 func Hello(name string) (string, error) {
 	// empty name will return an error with a message

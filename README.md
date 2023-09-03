@@ -62,6 +62,7 @@ go mod edit -replace xxx/packageName=../packageName
 - [Compile and install the application](https://go.dev/doc/tutorial/compile-install)
 - [go workspace](https://go.dev/ref/mod#workspaces)
 - [go multi-module workspaces](https://go.dev/doc/tutorial/workspaces)
+- [go playground](https://go.dev/play/?v=gotip)
 
 ### go 常用指令
 

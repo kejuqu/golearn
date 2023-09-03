@@ -1,5 +1,7 @@
 package main // package main 表示该文件属于 main 包。这是一个特殊的包名，用于指定可执行程序的入口
 
+// learn link: https://go.dev/doc/tutorial/call-module-code
+
 /*
 golearn
 	- example.com/greetings 是一个模块引用路径，是声明在 greetings下的 go.mod 中的
