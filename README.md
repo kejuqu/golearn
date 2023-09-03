@@ -61,6 +61,7 @@ go mod edit -replace xxx/packageName=../packageName
 - [go command](https://pkg.go.dev/cmd/go#hdr-Compile_packages_and_dependencies)
 - [Compile and install the application](https://go.dev/doc/tutorial/compile-install)
 - [go workspace](https://go.dev/ref/mod#workspaces)
+- [go multi-module workspaces](https://go.dev/doc/tutorial/workspaces)
 
 ### go 常用指令
 
@@ -72,6 +73,8 @@ go mod edit -replace xxx/packageName=../packageName
 - go list -f '{{.Target}}' 发现 go 的安装路径
 - go install // 编译并且下载 packages
 - go help // 查看更多有关 go 的指令
+- go get . // 获取当前模块依赖的模块, go 将会下载这些依赖模块来解决 import 声明的错误
+- go run . // 在当前目录运行你的代码
 
 ## 学习疑问 QA
 
@@ -133,3 +136,14 @@ export PATH=$PATH:(projectPath值)
 2. 在 multi-module workspaces 下单个 module 无代码提示 & 不能跳转到 go 文件
    解决方法：可擦考 [go multi-module workspaces](https://go.dev/doc/tutorial/workspaces)
    比如我当前的 workspace 的名字叫做 golearn, 如果我要让
+3. 如果要在 multi-module workspaces 下去单独的运行某个 module（如 hello module, web-service-gin module), 需要在 golearn(当前的 workspaces 名字)打开终端
+
+```
+# golearn path
+go work use ./hello/
+go work use ./web-service-gin/
+
+# 然后切换到独立的 module 下运行运行代码即可，比如
+cd ./hello
+go run . # run current code
+```
